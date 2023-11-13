@@ -1,0 +1,17 @@
+{% extends 'src/views/partials/layout.nunjucks' %}
+{% block content %}
+<div class="row row-cols-4">
+    {% for char in chars %}
+    <div class="col">
+        <div class="card mb-3">
+            <img src="{{char.image}}" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">{{char.name}}</h5>
+                <p class="card-text"><b>Status:</b>{{char.status}}</p>
+                <a href="#" class="btn btn-primary">Go somewhere</a>
+            </div>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+{% endblock %}

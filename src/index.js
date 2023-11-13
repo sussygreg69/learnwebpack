@@ -1,5 +1,7 @@
-import esm from './esm';
+import esm from './esm.js';
 esm();
-const cjs = require('./common');
-cjs();
-import './style.css';
+//const cjs = require('./common.js');
+//cjs();
+import './style.scss';
+
+import * as bootstrap from 'bootstrap';
