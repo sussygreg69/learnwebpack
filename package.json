@@ -30,8 +30,12 @@
     "webpack-dev-server": "^4.15.1"
   },
   "dependencies": {
+    "@googlemaps/js-api-loader": "^1.16.2",
     "@popperjs/core": "^2.11.8",
+    "axios": "^1.6.2",
     "bootstrap": "^5.3.2",
+    "dotenv-webpack": "^8.0.1",
+    "leaflet": "^1.9.4",
     "surge": "^0.23.1",
     "vue": "^3.3.8",
     "vue-router": "^4.2.5"

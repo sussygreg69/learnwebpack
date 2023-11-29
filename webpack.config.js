@@ -6,7 +6,7 @@ import fs from 'fs';
 import glob from 'glob';
 import { PurgeCSSPlugin } from 'purgecss-webpack-plugin';
 import { VueLoaderPlugin } from 'vue-loader';
-
+import Dotenv from 'dotenv-webpack';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -21,6 +21,8 @@ export default {
         static: {
             directory: path.resolve(__dirname, 'public')
         },
+        historyApiFallback: true,
+        open: true,
         port: 9000,
         compress: true,
     },
@@ -48,10 +50,15 @@ export default {
         new HtmlWebpackPlugin({
             template: './src/index.html'
         }),
+        new HtmlWebpackPlugin({
+            filename: '200.html',
+            template: './src/index.html'
+        }),
         new MiniCssExtractPlugin(),
         // new PurgeCSSPlugin({
         //     paths: glob.sync(`src/views/**/*`, { nodir: true }),
         // }),
-        new VueLoaderPlugin()
+        new VueLoaderPlugin(),
+        new Dotenv()
     ],
 }
